@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/dashboard.dart'; // Make sure this file exists
+import 'package:food_app/home_page.dart';
+import 'package:food_app/login_page.dart';
 
-void main() {
-  runApp(const MyApp());
+void main(){
+  runApp(Myapp());
 }
+class Myapp extends StatelessWidget {
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Food App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.red,
       ),
-      home: Dashboard(),
+      routes:{
+        "/home":(context)=>HomePage(),
+        "/":(context)=>LoginPage(),
+        "/login":(context)=>LoginPage()
+      } ,
     );
+
   }
 }

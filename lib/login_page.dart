@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/utils/routes.dart'; // import route file
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool _isAnimating = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,10 +20,14 @@ class LoginPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/image/login_image.png",
-                  fit: BoxFit.cover,
-                  height: 250,
+                AnimatedContainer(
+                  duration: Duration(milliseconds: 500),
+                  height: _isAnimating ? 200 : 250,
+                  curve: Curves.easeInOut,
+                  child: Image.asset(
+                    "assets/image/login_image.png",
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -48,7 +59,12 @@ class LoginPage extends StatelessWidget {
                   width: double.infinity,
                   height: 48,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async {
+                      setState(() {
+                        _isAnimating = true;
+                      });
+
+                      await Future.delayed(Duration(milliseconds: 500)); // wait for animation
 
                       Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },

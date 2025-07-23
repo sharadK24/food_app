@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "iPhone 14 Pro",
+      "description": "Apple iPhone 14 Pro with A16 Bionic chip",
+      "price": 1299,
+      "color": "#1D1D1F",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=940&hei=1112&fmt=png-alpha&.v=1663703840378"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S24 Ultra",
+      "description": "Samsung Galaxy S24 Ultra with Snapdragon 8 Gen 3",
+      "price": 1199,
+      "color": "#2B2B2B",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s928bzkdins/gallery/in-galaxy-s24-ultra-s928-491017-sm-s928bzkdins-thumb-538851939"
+    },
+    {
+      "id": 3,
+      "name": "Google Pixel 8 Pro",
+      "description": "Google Pixel 8 Pro with Tensor G3 chip",
+      "price": 999,
+      "color": "#3C3C3C",
+      "image": "https://store.google.com/product/images/phones/pixel_8_pro/colors/obsidian-front.png"
+    },
+    {
+      "id": 4,
+      "name": "OnePlus 12",
+      "description": "OnePlus 12 with Snapdragon 8 Gen 3 and 120Hz AMOLED display",
+      "price": 899,
+      "color": "#1A1A1A",
+      "image": "https://image01.oneplus.net/ebp/202401/03/1-m00-4c-65-cpgm7wvwyoaanhrjaaq7kkahqbm649.png"
+    },
+    {
+      "id": 5,
+      "name": "Xiaomi 14 Pro",
+      "description": "Xiaomi 14 Pro with Snapdragon 8 Gen 3 and Leica optics",
+      "price": 799,
+      "color": "#222222",
+      "image": "https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-14-pro/specs-01.jpg"
+    }
+  ]
+}

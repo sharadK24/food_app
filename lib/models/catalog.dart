@@ -1,14 +1,9 @@
 class CatalogModel {
-  static final items = [
-    Item(
-      id: 1,
-      name: "iPhone 14 Pro",
-      description: "Apple iPhone 14 Pro with A16 Bionic chip",
-      price: 1299,
-      color: "#1D1D1F",
-      image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=940&hei=1112&fmt=png-alpha&.v=1663703840378",
-    ),
-  ];
+  static List<Item> items = [];
+
+  static List<Item> fromJson(List<dynamic> jsonList) {
+    return jsonList.map((json) => Item.fromMap(json)).toList();
+  }
 }
 
 class Item {
@@ -16,8 +11,8 @@ class Item {
   final String name;
   final String description;
   final num price;
-  final String image;
   final String color;
+  final String image;
 
   Item({
     required this.id,
@@ -27,4 +22,24 @@ class Item {
     required this.color,
     required this.image,
   });
+
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      description: map["description"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
+  }
+
+  Map<String, dynamic> toMap() => {
+    "id": id,
+    "name": name,
+    "description": description,
+    "price": price,
+    "color": color,
+    "image": image,
+  };
 }
